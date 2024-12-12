@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+<nav class="bg-white shadow-md fixed z-10 top-0 w-full">
+    <div class="flex justify-center px-5 py-3  w-full">
+        <div class="flex">
+            <a href="#" class="text-2xl font-bold text-blue-600 flex items-center">
+                <div class="logo-container w-12 h-12 bg-blue-500 text-white rounded-full flex items-center justify-center mr-3 shadow-md">
+                    <span class="text-3xl font-bold">+</span>
+                </div>
+                Sanjeevani
+            </a>
+        </div>
+        <div class="flex justify-end mr-50 space-x-3 w-full">
+            <a href="#" class="text-gray-700 hover:text-blue-600 transition duration-300 flex items-center">
+                <i data-feather="message-circle" class="mr-1"></i>
+                AI Chatbot
+            </a>
+            <a href="{{url_for('dashboard')}}" class="text-gray-700 hover:text-blue-600 transition duration-300 flex items-center">
+                <i data-feather="bar-chart-2" class="mr-1"></i>
+                Dashboard
+            </a>
+            <a href="#" class="text-gray-700 hover:text-blue-600 transition duration-300 flex items-center">
+                <i data-feather="info" class="mr-1"></i>
+                About Us
+            </a>
+            <!-- <a href="{{url_for('login')}}" class="text-gray-700 hover:text-blue-600 transition duration-300 flex items-center">
+                <i data-feather="key" class="mr-1"></i>
+                Login
+            </a> -->
+            <a href="{{url_for('signup')}}" class="text-gray-700 hover:text-blue-600 transition duration-300 flex items-center">
+                <i data-feather="plus" class="mr-1"></i>
+                Sign Up
+            </a>
+        </div>
+    </div>
+</nav>
+
+<main class=" justify-center">
+    <section class="bg-white shadow-md rounded-lg p-6">
+        <h1 class="text-3xl font-bold text-blue-700">Welcome {{username}} to Sanjeevani</h1>
+        <p class="text-gray-600 py-3">Your comprehensive health companion powered by AI technology.</p>
+    </section>
+</main>
+
+<script>
+    // Initialize Feather icons
+    feather.replace();
+</script>
+
+
+{% endblock %}

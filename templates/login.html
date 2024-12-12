@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block body %}
+<!-- Signup Page -->
+  <div class="container">
+    <div class="left-panel">
+      <h1>Welcome to Spacer</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquam luctus tristique.</p>
+    </div>
+    <div class="right-panel">
+      <h2>Create Your Account</h2>
+      <form id="auth-form" action="{{url_for('login')}}" method="post">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="username" name="username" placeholder="Enter your name" required>
+        </div>
+        <!-- <div class="form-group">
+          <label for="email">E-mail Address</label>
+          <input type="email" id="email" placeholder="Enter your email" required>
+        </div> -->
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="Enter your password" required>
+        </div>
+        <div class="checkbox">
+          <input type="checkbox" id="terms" required>
+          <label for="terms">I agree with <a href="#">Terms & Conditions</a></label>
+        </div>
+        <div class="buttons">
+          <button type="submit" class="btn btn-primary" onclick="setActionForm('signup')">Sign Up</button>
+          <button type="button" class="btn btn-secondary" onclick="setActionForm('login')">Login</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function setActionForm(action){
+        let form = document.getElementById('auth-form');
+        if (action === 'login'){
+            form.action = "{{url_for('login')}}";
+            form.method = 'post';
+            form.submit();
+        } else if( action === 'signup'){ 
+            form.action = "{{url_for('signup')}}";
+            form.method = 'post';
+            form.submit(); 
+        }
+    }
+</script>
+{% endblock %}

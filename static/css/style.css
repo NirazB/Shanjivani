@@ -1,4 +1,8 @@
 /* Custom styles for Sanjeevani */
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
 .logo-container {
     transition: all 0.3s ease;
     background: linear-gradient(135deg, #3B82F6, #1D4ED8);
@@ -114,9 +118,6 @@ canvas {
     width: 100%;
     padding: 0.5rem;
 }
-<<<<<<< HEAD
-=======
-
 .flash-messages {
     margin: 1rem 0;
     padding: 1rem;
@@ -132,4 +133,4 @@ canvas {
     background-color: #e8f5e9;
     color: #2e7d32;  
 }
->>>>>>> 862b79f3bcbf201a41ffd20bdd24142712071a60
+

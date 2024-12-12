@@ -1,0 +1,4 @@
+<a href="#" class="flex items-center py-3 px-4 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition duration-300">
+                        <i data-feather="info" class="mr-3"></i>
+                        About Us
+                    </a>

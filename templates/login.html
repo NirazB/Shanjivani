@@ -9,20 +9,22 @@
     </div>
     <div class="right-panel">
       <h2>Create Your Account</h2>
-<<<<<<< HEAD
-
-      
 
       <form id="auth-form" action="{{url_for('login')}}" method="post">
+        <div class="form-group">
+          <label for="role">Role</label>
+          <select id="role" name="role" onchange="toggleEmailField()" required>
+              <option value="user">User</option>
+              <option value="admin">Admin</option>
+          </select>
+      </div>
+      <div class="form-group" id="emailField" style="display:none;">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email">
+      </div>
         <div class="form-group">
           <label for="name">Name</label>
           <input type="text" id="username" name="username" placeholder="Enter your name" required onkeyup="validateForm()">
-=======
-      <form id="auth-form" action="{{url_for('login')}}" method="post">
-        <div class="form-group">
-          <label for="name">Name</label>
-          <input type="text" id="username" name="username" placeholder="Enter your name" required>
->>>>>>> 862b79f3bcbf201a41ffd20bdd24142712071a60
         </div>
         <!-- <div class="form-group">
           <label for="email">E-mail Address</label>
@@ -30,7 +32,6 @@
         </div> -->
         <div class="form-group">
           <label for="password">Password</label>
-<<<<<<< HEAD
           <input type="password" id="password" name="password" onkeyup="validateForm()" placeholder="Enter your password" required>
         </div>
         {% with messages = get_flashed_messages(with_categories=true) %}
@@ -44,22 +45,13 @@
             </div>
           {% endif %}
         {% endwith %}
-=======
-          <input type="password" id="password" name="password" placeholder="Enter your password" required>
-        </div>
->>>>>>> 862b79f3bcbf201a41ffd20bdd24142712071a60
         <div class="checkbox">
           <input type="checkbox" id="terms" required>
           <label for="terms">I agree with <a href="#">Terms & Conditions</a></label>
         </div>
         <div class="buttons">
-<<<<<<< HEAD
           <button type="submit" class="btn btn-primary" id="submitBtn" onclick="setActionForm('signup')" disabled>Sign Up</button>
           <button type="button" class="btn btn-secondary" id="loginBtn" onclick="setActionForm('login')" disabled>Login</button>
-=======
-          <button type="submit" class="btn btn-primary" onclick="setActionForm('signup')">Sign Up</button>
-          <button type="button" class="btn btn-secondary" onclick="setActionForm('login')">Login</button>
->>>>>>> 862b79f3bcbf201a41ffd20bdd24142712071a60
         </div>
       </form>
     </div>
@@ -78,7 +70,6 @@
             form.submit(); 
         }
     }
-<<<<<<< HEAD
     function validateForm() {
     const username = document.getElementById('username').value.trim();
     const password = document.getElementById('password').value.trim();
@@ -92,8 +83,12 @@
         submitBtn.disabled = true;
         loginBtn.disabled = true;
     }
+    function toggleEmailField() {
+    const role = document.getElementById('role').value;
+    const emailField = document.getElementById('emailField');
+    emailField.style.display = role === 'admin' ? 'block' : 'none';
+    document.getElementById('email').required = role === 'admin';
 }
-=======
->>>>>>> 862b79f3bcbf201a41ffd20bdd24142712071a60
+}
 </script>
 {% endblock %}

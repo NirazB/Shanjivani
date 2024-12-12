@@ -1,0 +1,73 @@
+body {
+    background-color: #f4f6f9;
+    font-family: 'Arial', sans-serif;
+}
+
+.dashboard-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.resource-card {
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.resource-card:hover {
+    transform: scale(1.02);
+}
+
+.card-header {
+    background-color: #f8f9fa;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    color: #333;
+}
+
+.card-header i {
+    margin-right: 10px;
+    color: #007bff;
+}
+
+.beds-card .card-header i { color: #28a745; }
+.staff-card .card-header i { color: #17a2b8; }
+.emergency-card .card-header i { color: #dc3545; }
+.equipment-card .card-header i { color: #6f42c1; }
+.statistics-card .card-header i { color: #ffc107; }
+
+.progress {
+    height: 25px;
+    margin-top: 10px;
+}
+
+.staff-breakdown {
+    text-align: center;
+}
+
+.staff-breakdown h3 {
+    color: #007bff;
+    margin-top: 10px;
+}
+
+.stat-number {
+    font-size: 24px;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.emergency-card .text-danger {
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .dashboard-container {
+        padding: 10px;
+    }
+    
+    .resource-card {
+        margin-bottom: 15px;
+    }
+}

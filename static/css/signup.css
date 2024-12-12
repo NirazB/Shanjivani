@@ -1,0 +1,154 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #f0f4f8, #d9e6f5);
+}
+
+/* Container */
+.container {
+    display: flex;
+    width: 900px;
+    height: 500px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    overflow: hidden;
+    background: white;
+}
+
+/* Left Panel */
+.left-panel {
+    flex: 1;
+    background: linear-gradient(to bottom, #3366ff, #0033cc);
+    color: white;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.left-panel h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+.left-panel h2 {
+    font-size: 40px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.left-panel p {
+    font-size: 14px;
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+/* Footer */
+footer {
+    font-size: 12px;
+    text-align: center;
+}
+
+/* Right Panel */
+.right-panel {
+    flex: 1.5;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.right-panel h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Form */
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group label {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+    box-sizing: border-box;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #3366ff;
+}
+
+.terms {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+}
+
+.terms input {
+    margin-right: 8px;
+}
+
+.terms a {
+    color: #3366ff;
+    text-decoration: none;
+}
+
+.terms a:hover {
+    text-decoration: underline;
+}
+
+/* Buttons */
+.buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.signup-btn {
+    flex: 1;
+    padding: 10px 0;
+    background: #3366ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.signup-btn:hover {
+    background: #0033cc;
+}
+
+.signin-btn {
+    flex: 1;
+    padding: 10px 0;
+    background: white;
+    color: #3366ff;
+    border: 1px solid #3366ff;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.signin-btn:hover {
+    background: #f0f4f8;
+}

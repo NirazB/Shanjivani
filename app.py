@@ -20,8 +20,8 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 587
 app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USERNAME'] = 'nrzzrn8@gmail.com'  # Website email , from this i can send
-app.config['MAIL_PASSWORD'] = 'uqzp mizo whos gbca'  # Website email app password
+app.config['MAIL_USERNAME'] = 'your-email'  # Website email , from this i can send
+app.config['MAIL_PASSWORD'] = 'your-app-password'  # Website email app password
 ADMIN_EMAIL = 'nirajbista25@gmail.com'  # Admin receiving verification emails
 
 db = SQLAlchemy(app)
